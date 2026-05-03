@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meteor Muncher</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">tiny browser arcade</p>
+          <h1>Meteor Muncher</h1>
+        </div>
+        <div class="score-card">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+      </section>
+
+      <canvas id="game" width="960" height="540" aria-label="Meteor Muncher game canvas"></canvas>
+
+      <section class="hud">
+        <p><kbd>WASD</kbd>/<kbd>Arrows</kbd> move · <kbd>Space</kbd> boost · eat stars · dodge rocks</p>
+        <p id="status">Collect 10 stars to wake the comet storm.</p>
+      </section>
+    </main>
+    <script type="module" src="./src/game.js"></script>
+  </body>
+</html>

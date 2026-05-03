@@ -1,0 +1,105 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #080713;
+  color: #f7f2ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(111, 66, 255, 0.4), transparent 28rem),
+    radial-gradient(circle at 80% 0%, rgba(255, 120, 80, 0.26), transparent 24rem),
+    linear-gradient(135deg, #05040d, #15102b 55%, #070611);
+}
+
+.shell {
+  width: min(96vw, 1050px);
+  padding: 22px;
+}
+
+.hero, .hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.eyebrow {
+  color: #8ff6ff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2rem, 7vw, 5rem);
+  line-height: 0.9;
+  margin: 0 0 18px;
+  text-shadow: 0 0 28px rgba(143, 246, 255, 0.35);
+}
+
+.score-card {
+  min-width: 130px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  text-align: right;
+}
+
+.score-card span {
+  display: block;
+  color: #c7bbff;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.score-card strong {
+  font-size: 2.4rem;
+  color: #ffe66d;
+}
+
+canvas {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 28px;
+  background: #080713;
+  box-shadow: 0 28px 90px rgba(0,0,0,0.55), inset 0 0 90px rgba(82, 66, 255, 0.14);
+}
+
+.hud {
+  color: #d9d2ff;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  margin-top: 14px;
+}
+
+kbd {
+  border: 1px solid rgba(255,255,255,0.22);
+  border-bottom-width: 3px;
+  border-radius: 7px;
+  padding: 2px 7px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+#status { color: #8ff6ff; }
+
+@media (max-width: 700px) {
+  .hero { align-items: flex-end; }
+  .score-card { min-width: 96px; padding: 12px; }
+  .score-card strong { font-size: 1.8rem; }
+  .hud { font-size: 0.82rem; }
+}
